@@ -5,17 +5,20 @@
  */
 package Formularios;
 
+import Controladores.controladorLogin;
+
 /**
  *
  * @author Familia Salgado
  */
 public class Login extends javax.swing.JFrame {
-
+private controladorLogin con;
     /**
      * Creates new form Login
      */
     public Login() {
         initComponents();
+        con = new controladorLogin(this);
     }
 
     /**
@@ -27,20 +30,21 @@ public class Login extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        Act = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jPasswordField1 = new javax.swing.JPasswordField();
-        jButton1 = new javax.swing.JButton();
+        txt_User = new javax.swing.JTextField();
+        cmb_User = new javax.swing.JComboBox<>();
+        ptxt_Clave = new javax.swing.JPasswordField();
+        btt_Ing = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         jRadioButton1 = new javax.swing.JRadioButton();
         jRadioButton2 = new javax.swing.JRadioButton();
         jRadioButton3 = new javax.swing.JRadioButton();
-        jButton2 = new javax.swing.JButton();
+        btt_Cont = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -59,36 +63,39 @@ public class Login extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel4.setText("Clave:");
 
-        jTextField1.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        txt_User.setHorizontalAlignment(javax.swing.JTextField.LEFT);
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "RC", "TI", "CC" }));
+        cmb_User.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "RC", "TI", "CC" }));
 
-        jPasswordField1.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        ptxt_Clave.setHorizontalAlignment(javax.swing.JTextField.LEFT);
 
-        jButton1.setBackground(new java.awt.Color(0, 51, 255));
-        jButton1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("Ingresar");
+        btt_Ing.setBackground(new java.awt.Color(0, 51, 255));
+        btt_Ing.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        btt_Ing.setForeground(new java.awt.Color(255, 255, 255));
+        btt_Ing.setText("Ingresar");
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(51, 102, 255));
         jLabel5.setText("¿Que desea hacer?");
 
         jRadioButton1.setBackground(new java.awt.Color(153, 204, 255));
+        Act.add(jRadioButton1);
         jRadioButton1.setForeground(new java.awt.Color(0, 51, 153));
         jRadioButton1.setText("Solicitar un nuevo usuario");
 
         jRadioButton2.setBackground(new java.awt.Color(153, 204, 255));
+        Act.add(jRadioButton2);
         jRadioButton2.setForeground(new java.awt.Color(0, 51, 153));
         jRadioButton2.setText("Cambiar su clave");
 
         jRadioButton3.setBackground(new java.awt.Color(153, 204, 255));
+        Act.add(jRadioButton3);
         jRadioButton3.setForeground(new java.awt.Color(0, 51, 153));
         jRadioButton3.setText("Modificar su información de contacto");
 
-        jButton2.setBackground(new java.awt.Color(204, 0, 51));
-        jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("Continuar");
+        btt_Cont.setBackground(new java.awt.Color(204, 0, 51));
+        btt_Cont.setForeground(new java.awt.Color(255, 255, 255));
+        btt_Cont.setText("Continuar");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -102,7 +109,7 @@ public class Login extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createSequentialGroup()
                             .addGap(95, 95, 95)
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jButton2)
+                                .addComponent(btt_Cont)
                                 .addComponent(jLabel5)))
                         .addGroup(jPanel1Layout.createSequentialGroup()
                             .addGap(40, 40, 40)
@@ -125,13 +132,13 @@ public class Login extends javax.swing.JFrame {
                                     .addComponent(jLabel4)
                                     .addGap(18, 18, 18)
                                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jButton1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 187, Short.MAX_VALUE)
-                                        .addComponent(jPasswordField1)))
+                                        .addComponent(btt_Ing, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 187, Short.MAX_VALUE)
+                                        .addComponent(ptxt_Clave)))
                                 .addGroup(jPanel1Layout.createSequentialGroup()
                                     .addGap(96, 96, 96)
-                                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cmb_User, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(jTextField1)))
+                                    .addComponent(txt_User)))
                             .addGap(67, 67, 67)))
                     .addGap(25, 25, 25)))
         );
@@ -148,14 +155,14 @@ public class Login extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(jLabel3)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(cmb_User, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txt_User, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(ptxt_Clave, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jLabel4))
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btt_Ing, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
                     .addComponent(jLabel5)
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -165,7 +172,7 @@ public class Login extends javax.swing.JFrame {
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                     .addComponent(jRadioButton2)
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                    .addComponent(jButton2)
+                    .addComponent(btt_Cont)
                     .addContainerGap()))
         );
 
@@ -220,19 +227,20 @@ public class Login extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.ButtonGroup Act;
+    public javax.swing.JButton btt_Cont;
+    public javax.swing.JButton btt_Ing;
+    public javax.swing.JComboBox<String> cmb_User;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JRadioButton jRadioButton3;
-    private javax.swing.JTextField jTextField1;
+    public javax.swing.JPasswordField ptxt_Clave;
+    public javax.swing.JTextField txt_User;
     // End of variables declaration//GEN-END:variables
 }
