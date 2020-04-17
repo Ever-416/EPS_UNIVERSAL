@@ -19,8 +19,9 @@ private controladorLogin con;
     public Login() {
         initComponents();
         con = new controladorLogin(this);
+        
     }
-
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -136,8 +137,8 @@ private controladorLogin con;
                                         .addComponent(ptxt_Clave)))
                                 .addGroup(jPanel1Layout.createSequentialGroup()
                                     .addGap(96, 96, 96)
-                                    .addComponent(cmb_User, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(cmb_User, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                     .addComponent(txt_User)))
                             .addGap(67, 67, 67)))
                     .addGap(25, 25, 25)))

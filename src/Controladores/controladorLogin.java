@@ -5,6 +5,7 @@ import Formularios.Doctor;
 import Formularios.Login;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.ImageIcon;
 
 public class controladorLogin implements ActionListener{
 
@@ -19,6 +20,11 @@ public class controladorLogin implements ActionListener{
     public controladorLogin(Login vista){
     op=vista;
     events();
+    op.setTitle("Salud universal");
+    op.setLocationRelativeTo(null);
+    op.setLocation(450,250);
+    op.setVisible(true);
+    op.setIconImage(new ImageIcon(getClass().getResource("/Imagenes/logo.png")).getImage());
     }
     
             

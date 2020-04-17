@@ -5,43 +5,41 @@
  */
 package Formularios;
 
+import Controladores.controladorLogin;
 import javax.swing.ImageIcon;
-
+import Controladores.ControladorDoctor;
 /**
  *
  * @author Alvaro
  */
 public class Doctor extends javax.swing.JFrame {
-
+private ControladorDoctor con;
    private RegPaciente rp = new RegPaciente(); 
    private HisMedico hm = new HisMedico();
    private CitasAgend ca = new CitasAgend();
     private void inicializarFormularios(){
         RP.setContentPane(rp);
         rp.setSize(500,500);
-        RP.setSize(860,690);
+        RP.setSize(860,710);
         RP.setLocation(0,0);
         
         HM.setContentPane(hm);
         hm.setSize(500,500);
-        HM.setSize(860,690);
+        HM.setSize(860,710);
         HM.setLocation(0,0);
          
         CA.setContentPane(ca);
         ca.setSize(500,500);
-        CA.setSize(860,690);
+        CA.setSize(860,710);
         CA.setLocation(0,0);
         
      }
     public Doctor() {
         initComponents();
-        setIconImage(new ImageIcon(getClass().getResource("/Imagenes/logo.png")).getImage());
-        this.setLocation(200,200);
-        this.setSize(800,700);
-        setResizable(true);
-        setTitle("Salud universal");
+         con = new ControladorDoctor(this);
         this.inicializarFormularios();
-        setLocationRelativeTo(null);
+        
+      
     }
 
     /**
@@ -53,10 +51,11 @@ public class Doctor extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        Escritorio = new javax.swing.JDesktopPane();
+        dpEscritorio = new javax.swing.JDesktopPane();
         RP = new javax.swing.JInternalFrame();
         HM = new javax.swing.JInternalFrame();
         CA = new javax.swing.JInternalFrame();
+        jLabel1 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMrp = new javax.swing.JMenuItem();
@@ -83,7 +82,7 @@ public class Doctor extends javax.swing.JFrame {
             .addGap(0, 0, Short.MAX_VALUE)
         );
 
-        Escritorio.add(RP);
+        dpEscritorio.add(RP);
         RP.setBounds(0, 0, 0, 0);
 
         HM.setClosable(true);
@@ -101,7 +100,7 @@ public class Doctor extends javax.swing.JFrame {
             .addGap(0, 0, Short.MAX_VALUE)
         );
 
-        Escritorio.add(HM);
+        dpEscritorio.add(HM);
         HM.setBounds(0, 0, 0, 0);
 
         CA.setClosable(true);
@@ -119,11 +118,16 @@ public class Doctor extends javax.swing.JFrame {
             .addGap(0, 0, Short.MAX_VALUE)
         );
 
-        Escritorio.add(CA);
+        dpEscritorio.add(CA);
         CA.setBounds(0, 0, 0, 0);
 
-        getContentPane().add(Escritorio);
-        Escritorio.setBounds(0, 0, 880, 670);
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/blanco_1.jpg"))); // NOI18N
+        jLabel1.setText("jLabel1");
+        dpEscritorio.add(jLabel1);
+        jLabel1.setBounds(0, 0, 880, 660);
+
+        getContentPane().add(dpEscritorio);
+        dpEscritorio.setBounds(0, 0, 880, 670);
 
         jMenu1.setText("Menu");
 
@@ -188,9 +192,7 @@ public class Doctor extends javax.swing.JFrame {
     }//GEN-LAST:event_jMrpActionPerformed
 
     private void jMsairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMsairActionPerformed
-        Log l=new Log();
-        l.setVisible(true);
-        this.setVisible(false);        
+                
     }//GEN-LAST:event_jMsairActionPerformed
                 
 
@@ -228,15 +230,16 @@ public class Doctor extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JInternalFrame CA;
-    private javax.swing.JDesktopPane Escritorio;
-    private javax.swing.JInternalFrame HM;
-    private javax.swing.JInternalFrame RP;
-    private javax.swing.JMenuItem jMca;
+    public javax.swing.JInternalFrame CA;
+    public javax.swing.JInternalFrame HM;
+    public javax.swing.JInternalFrame RP;
+    public javax.swing.JDesktopPane dpEscritorio;
+    private javax.swing.JLabel jLabel1;
+    public javax.swing.JMenuItem jMca;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMhm;
-    private javax.swing.JMenuItem jMrp;
-    private javax.swing.JMenuItem jMsair;
+    public javax.swing.JMenuItem jMhm;
+    public javax.swing.JMenuItem jMrp;
+    public javax.swing.JMenuItem jMsair;
     // End of variables declaration//GEN-END:variables
 }

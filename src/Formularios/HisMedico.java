@@ -79,7 +79,7 @@ public class HisMedico extends javax.swing.JPanel {
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(null);
 
-        jPanel2.setBackground(new java.awt.Color(0, 0, 204));
+        jPanel2.setBackground(new java.awt.Color(51, 153, 255));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 3, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -313,6 +313,7 @@ public class HisMedico extends javax.swing.JPanel {
         jPanel1.add(jLabel3);
         jLabel3.setBounds(60, 70, 14, 14);
 
+        jButton1.setBackground(new java.awt.Color(184, 184, 225));
         jButton1.setText("Consultar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -320,10 +321,10 @@ public class HisMedico extends javax.swing.JPanel {
             }
         });
         jPanel1.add(jButton1);
-        jButton1.setBounds(270, 70, 80, 31);
+        jButton1.setBounds(270, 70, 100, 31);
 
         add(jPanel1);
-        jPanel1.setBounds(0, 0, 780, 620);
+        jPanel1.setBounds(0, 0, 780, 630);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
