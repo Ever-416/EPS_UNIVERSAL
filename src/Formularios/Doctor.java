@@ -14,7 +14,7 @@ import Controladores.ControladorDoctor;
  */
 public class Doctor extends javax.swing.JFrame {
 private ControladorDoctor con;
-   private RegPaciente rp = new RegPaciente(); 
+   private ContMedico rp = new ContMedico(); 
    private HisMedico hm = new HisMedico();
    private CitasAgend ca = new CitasAgend();
     private void inicializarFormularios(){

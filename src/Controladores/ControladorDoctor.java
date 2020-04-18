@@ -7,7 +7,7 @@ package Controladores;
 
 import Formularios.Doctor;
 import Formularios.Login;
-import Formularios.RegPaciente;
+import Formularios.ContMedico;
 import Formularios.HisMedico;
 import Formularios.CitasAgend;
 import java.awt.event.ActionEvent;

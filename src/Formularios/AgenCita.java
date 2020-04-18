@@ -2,10 +2,10 @@
 package Formularios;
 
 
-public class Cita extends javax.swing.JPanel {
+public class AgenCita extends javax.swing.JPanel {
 
     
-    public Cita() {
+    public AgenCita() {
         initComponents();
     }
 
