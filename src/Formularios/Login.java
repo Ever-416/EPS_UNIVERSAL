@@ -42,7 +42,6 @@ private controladorLogin con;
         btt_Ing = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         RadSoli = new javax.swing.JRadioButton();
-        RadMcla = new javax.swing.JRadioButton();
         RadMinfo = new javax.swing.JRadioButton();
         btt_Cont = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
@@ -87,15 +86,10 @@ private controladorLogin con;
         RadSoli.setForeground(new java.awt.Color(64, 71, 203));
         RadSoli.setText("Solicitar un nuevo usuario");
 
-        RadMcla.setBackground(new java.awt.Color(220, 249, 255));
-        Act.add(RadMcla);
-        RadMcla.setForeground(new java.awt.Color(64, 71, 203));
-        RadMcla.setText("Cambiar su clave");
-
         RadMinfo.setBackground(new java.awt.Color(220, 249, 255));
         Act.add(RadMinfo);
         RadMinfo.setForeground(new java.awt.Color(64, 71, 203));
-        RadMinfo.setText("Modificar su información de contacto");
+        RadMinfo.setText("Modificar su información de usuario");
 
         btt_Cont.setBackground(new java.awt.Color(204, 0, 51));
         btt_Cont.setForeground(new java.awt.Color(255, 255, 255));
@@ -119,8 +113,7 @@ private controladorLogin con;
                     .addComponent(btt_Cont)
                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(RadMinfo)
-                        .addComponent(RadSoli)
-                        .addComponent(RadMcla)))
+                        .addComponent(RadSoli)))
                 .addGap(92, 92, 92))
         );
         jPanel2Layout.setVerticalGroup(
@@ -132,11 +125,9 @@ private controladorLogin con;
                 .addComponent(RadSoli)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(RadMinfo)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(RadMcla)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addComponent(btt_Cont)
-                .addContainerGap(19, Short.MAX_VALUE))
+                .addContainerGap(34, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -255,7 +246,6 @@ private controladorLogin con;
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup Act;
-    public javax.swing.JRadioButton RadMcla;
     public javax.swing.JRadioButton RadMinfo;
     public javax.swing.JRadioButton RadSoli;
     public javax.swing.JButton btt_Cont;

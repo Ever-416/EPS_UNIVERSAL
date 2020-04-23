@@ -2,11 +2,15 @@
 package Controladores;
 
 import Formularios.Doctor;
+import Formularios.EditInfo;
 import Formularios.Login;
+import Formularios.Paciente;
 import Formularios.RegPaciente;
+import java.awt.Rectangle;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.ImageIcon;
+import javax.swing.JFrame;
 
 public class controladorLogin implements ActionListener{
 
@@ -33,8 +37,8 @@ public class controladorLogin implements ActionListener{
         Object ev=e.getSource();
         
        if (ev.equals(op.btt_Ing)) {
-       Doctor dc = new Doctor();    
-       dc.setVisible(true);
+       Paciente Pc = new Paciente();    
+       Pc.setVisible(true);
        op.dispose();
         }else if(ev.equals(op.btt_Cont)){
         
@@ -44,10 +48,15 @@ public class controladorLogin implements ActionListener{
            re.setVisible(true);
           // op.setEnabled(false);
            
-           }else if (true) {
-               
-           }else if (true) {
-               
+           }else if (op.RadMinfo.isSelected()) {
+           EditInfo re = new EditInfo();
+           JFrame op = new JFrame("Editar Información");
+           op.setResizable(false);
+           op.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+           op.setSize(372, 448);
+           op.add(re);
+           op.setLocationRelativeTo(null);
+           op.setVisible(true);
            }
            
         }      

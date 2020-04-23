@@ -5,7 +5,7 @@
  */
 package Formularios;
 
-import Controladores.ControladorDoctor;
+import Controladores.ControladorPaciente;
 import javax.swing.ImageIcon;
 
 /**
@@ -14,9 +14,9 @@ import javax.swing.ImageIcon;
  */
 public class Paciente extends javax.swing.JFrame {
 
-  //  private controladorDoctor dc;
+    private ControladorPaciente pc;
     
-   private ContMedico rp = new ContMedico(); 
+ /*  private ContMedico rp = new ContMedico(); 
    private HisMedico hm = new HisMedico();
    private CitasAgend ca = new CitasAgend();
     private void inicializarFormularios(){
@@ -34,7 +34,7 @@ public class Paciente extends javax.swing.JFrame {
         ca.setSize(500,500);
         CA.setSize(860,690);
         CA.setLocation(0,0);
-     }
+     }*/
     public Paciente() {
         initComponents();
         setIconImage(new ImageIcon(getClass().getResource("/Imagenes/logo.png")).getImage());
@@ -42,10 +42,10 @@ public class Paciente extends javax.swing.JFrame {
         this.setSize(800,700);
         setResizable(true);
         setTitle("Salud universal");
-        this.inicializarFormularios();
+     //   this.inicializarFormularios();
         setLocationRelativeTo(null);
         
-     //   dc = new controladorDoctor(this);
+        pc = new ControladorPaciente(this);
     }
 
     /**
@@ -58,87 +58,32 @@ public class Paciente extends javax.swing.JFrame {
     private void initComponents() {
 
         Escritorio = new javax.swing.JDesktopPane();
-        RP = new javax.swing.JInternalFrame();
-        HM = new javax.swing.JInternalFrame();
-        CA = new javax.swing.JInternalFrame();
+        jLabel1 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
-        jMrp = new javax.swing.JMenuItem();
-        jMhm = new javax.swing.JMenuItem();
-        jMca = new javax.swing.JMenuItem();
+        jMcita = new javax.swing.JMenuItem();
+        jMinfo = new javax.swing.JMenuItem();
         jMsair = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
         getContentPane().setLayout(null);
 
-        RP.setClosable(true);
-        RP.setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE);
-        RP.setVisible(false);
-
-        javax.swing.GroupLayout RPLayout = new javax.swing.GroupLayout(RP.getContentPane());
-        RP.getContentPane().setLayout(RPLayout);
-        RPLayout.setHorizontalGroup(
-            RPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-        RPLayout.setVerticalGroup(
-            RPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-
-        Escritorio.add(RP);
-        RP.setBounds(0, 0, 0, 0);
-
-        HM.setClosable(true);
-        HM.setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE);
-        HM.setVisible(false);
-
-        javax.swing.GroupLayout HMLayout = new javax.swing.GroupLayout(HM.getContentPane());
-        HM.getContentPane().setLayout(HMLayout);
-        HMLayout.setHorizontalGroup(
-            HMLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-        HMLayout.setVerticalGroup(
-            HMLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-
-        Escritorio.add(HM);
-        HM.setBounds(0, 0, 0, 0);
-
-        CA.setClosable(true);
-        CA.setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE);
-        CA.setVisible(false);
-
-        javax.swing.GroupLayout CALayout = new javax.swing.GroupLayout(CA.getContentPane());
-        CA.getContentPane().setLayout(CALayout);
-        CALayout.setHorizontalGroup(
-            CALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-        CALayout.setVerticalGroup(
-            CALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-
-        Escritorio.add(CA);
-        CA.setBounds(0, 0, 0, 0);
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/blanco_1.jpg"))); // NOI18N
+        jLabel1.setText("jLabel1");
+        Escritorio.add(jLabel1);
+        jLabel1.setBounds(0, 0, 880, 660);
 
         getContentPane().add(Escritorio);
         Escritorio.setBounds(0, 0, 880, 670);
 
         jMenu1.setText("Menu");
 
-        jMrp.setText("Agendar cita");
-        jMenu1.add(jMrp);
+        jMcita.setText("Agendar cita");
+        jMenu1.add(jMcita);
 
-        jMhm.setText("Editar información");
-        jMenu1.add(jMhm);
-
-        jMca.setText("Cambiar clave");
-        jMenu1.add(jMca);
+        jMinfo.setText("Editar información");
+        jMenu1.add(jMinfo);
 
         jMsair.setText("Cerrar sesion");
         jMenu1.add(jMsair);
@@ -188,15 +133,12 @@ public class Paciente extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JInternalFrame CA;
-    private javax.swing.JDesktopPane Escritorio;
-    private javax.swing.JInternalFrame HM;
-    private javax.swing.JInternalFrame RP;
-    public javax.swing.JMenuItem jMca;
+    public javax.swing.JDesktopPane Escritorio;
+    private javax.swing.JLabel jLabel1;
+    public javax.swing.JMenuItem jMcita;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuBar jMenuBar1;
-    public javax.swing.JMenuItem jMhm;
-    public javax.swing.JMenuItem jMrp;
+    public javax.swing.JMenuItem jMinfo;
     public javax.swing.JMenuItem jMsair;
     // End of variables declaration//GEN-END:variables
 }
